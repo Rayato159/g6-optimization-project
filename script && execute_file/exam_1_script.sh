@@ -3,14 +3,14 @@
 #Initial X
 X=$(echo "scale=1; -2.70" | bc)
 
-#Step 0.1
+#Step 0.01
 STEP=$(echo "scale=1; 0.01" | bc)
 
 I=1
 OUT=""
 
 #Output file
-FILE="../result/output1_new.txt"
+FILE="../result/output1.txt"
 touch $FILE
 
 rm input1.txt

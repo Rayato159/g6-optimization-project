@@ -50,4 +50,3 @@ class Equation():
 
         self.coef = self.my_model.getCoef()
         self.intercept = self.my_model.getIntercept()-1
-
