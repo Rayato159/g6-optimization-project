@@ -1,0 +1,2 @@
+exam1 min is about (4.8, -1.98794)
+exam2 min is about (0, -1, 3)
