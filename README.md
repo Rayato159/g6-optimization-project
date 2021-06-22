@@ -1,4 +1,4 @@
-## Final Project - Black Box Optimization problem [Group 6] :dart: 
+## :pencil: Final Project - Black Box Optimization problem [Group 6]
 
 ### Lecturer:
 Dr. Atthaphon Ariyarit
