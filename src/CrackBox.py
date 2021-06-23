@@ -18,7 +18,6 @@ class Black_Box_Function:
                 w.write(f"{self.x1} {self.x2}")
 
         os.system("wine " + self.execute)
-        os.system("clear")
 
         with open("./" + self.f_output, "r") as f:
             self.value = f.readline()
