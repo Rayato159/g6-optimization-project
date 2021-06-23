@@ -16,3 +16,21 @@ As the following problem. We write a [shell script](https://github.com/Rayato159
 
 ### Find the graph from output:
 Now, We already have output files with containing all input and value of the function from the input. The next thing we have to do is plot the graph to evaluate and find some spot where the minimum value is.
+
+### Exam No.1
+First of all, we use shell script to get outputs from 6.exe
+
+Second, plot the graph from outputs that we get from first step.
+
+![Figure_1](https://user-images.githubusercontent.com/85036863/123076115-06fbe180-d443-11eb-94f4-35cc316cf8c8.png)
+
+Third, we connect Python to 6.exe to get the real time output. We know the range of x where the lowest point is placed, so we choose Newton method for optimize the problem which use 3 iterations to solve.
+
+Output:
+```shell
+Iter	xi	fx	ea
+1	4.8210	-1.8753	1.4726
+2	4.8153	-1.9937	0.1179
+3	4.8153	-1.9946	0.0007
+Answer is 4.8153 and the minimum value is -1.9946
+```
