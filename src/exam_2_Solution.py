@@ -14,7 +14,9 @@ best_of_a_generation = np.empty((0, len(x1_x2_chrom)+1))
 start_time = time.time()
 gen = 1
 
-print(pool_of_solution)
+print("Initial\n")
+for index, value in enumerate(pool_of_solution):
+        print(f"LINE:\t{index+1}\t{value},\t{GA_model.getObjective(value)[2]:0.5f}")
 
 for i in range(generation):
     new_population = np.empty((0, len(x1_x2_chrom)))
