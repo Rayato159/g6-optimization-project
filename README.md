@@ -26,4 +26,8 @@ Second, plot the graph from outputs that we get from first step.
 
 Third, we connect Python to 6.exe to get the real time output. We know the range of x where the lowest point is placed, so we choose Newton method for optimize the problem which use 3 iterations to solve.
 
-Finally, the lowest point of this problem is -1.9946  at x = 4.8153
+Finally,
+
+```python
+lowest point of this problem is -1.9946  at x = 4.8153 
+```
