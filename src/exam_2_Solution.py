@@ -3,10 +3,10 @@ from matplotlib import pyplot as plt
 from Genetic_Algorithm import GA
 import time
 
-GA_model = GA(chromosome_size=16, population=8, cross_prob=0.9, muta_prob=0.1)
+GA_model = GA(chromosome_size=16, population=16, cross_prob=0.9, muta_prob=0.1)
 
 population = GA_model.population
-generation = 1
+generation = 2
 x1_x2_chrom = GA_model.create_generation()[0]
 pool_of_solution = GA_model.create_generation()
 best_of_a_generation = np.empty((0, len(x1_x2_chrom)+1))
@@ -101,3 +101,5 @@ print()
 print(f"Final Obj (Best): {GA_model.getObjective(best_overall)[2]:0.5f}")
 print(f"Decode_x1 (Best): {GA_model.getObjective(best_overall)[0]:0.5f}")
 print(f"Decode_x2 (Best): {GA_model.getObjective(best_overall)[1]:0.5f}")
+print()
+print(pool_of_solution)
