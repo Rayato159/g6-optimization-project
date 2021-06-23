@@ -22,8 +22,6 @@ First of all, we use shell script to get outputs from 6.exe
 
 Second, plot the graph from outputs that we get from first step.
 
-![Figure_1](https://user-images.githubusercontent.com/85036863/123076115-06fbe180-d443-11eb-94f4-35cc316cf8c8.png)
-
 Third, we connect Python to 6.exe to get the real time output. We know the range of x where the lowest point is placed, so we choose Newton method for optimize the problem which use 3 iterations to solve.
 
 Output:
