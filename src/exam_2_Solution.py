@@ -3,10 +3,10 @@ from matplotlib import pyplot as plt
 from Genetic_Algorithm import GA
 import time
 
-GA_model = GA(chromosome_size=16, population=25, cross_prob=0.9, muta_prob=0.1)
+GA_model = GA(chromosome_size=16, population=8, cross_prob=0.9, muta_prob=0.1)
 
 population = GA_model.population
-generation = 100
+generation = 1
 x1_x2_chrom = GA_model.create_generation()[0]
 pool_of_solution = GA_model.create_generation()
 best_of_a_generation = np.empty((0, len(x1_x2_chrom)+1))
@@ -64,8 +64,8 @@ for i in range(generation):
                                         sorted_best_for_plotting[0]))
 
     print()
-    for i in pool_of_solution:
-        print(GA_model.getObjective(i))
+    for index, value in enumerate(pool_of_solution):
+        print(f"LINE:\t{index+1}\t{value},\t{GA_model.getObjective(value)[2]:0.5f}")
 
     gen += 1
 
@@ -92,10 +92,10 @@ print(f"Final solution (Best): {best_overall[1:]}")
 print(f"Encode_x1 (Best): {best_overall[9:]}")
 print(f"Encode_x2 (Best): {best_overall[1:9]}")
 print("\n")
-print(f"Final obj value (Convergence) {GA_model.getObjective(best_convergence)[2]}")
-print(f"Decode_x1 (Convergence): {GA_model.getObjective(best_convergence)[0]}")
-print(f"Decode_x2 (Convergence): {GA_model.getObjective(best_convergence)[1]}")
+print(f"Final obj value (Convergence) {GA_model.getObjective(best_convergence)[2]:0.5f}")
+print(f"Decode_x1 (Convergence): {GA_model.getObjective(best_convergence)[0]:0.5f}")
+print(f"Decode_x2 (Convergence): {GA_model.getObjective(best_convergence)[1]:0.5f}")
 print()
-print(f"Final Obj (Best): {GA_model.getObjective(best_overall)[2]}")
-print(f"Decode_x1 (Best): {GA_model.getObjective(best_overall)[0]}")
-print(f"Decode_x2 (Best): {GA_model.getObjective(best_overall)[1]}")
+print(f"Final Obj (Best): {GA_model.getObjective(best_overall)[2]:0.5f}")
+print(f"Decode_x1 (Best): {GA_model.getObjective(best_overall)[0]:0.5f}")
+print(f"Decode_x2 (Best): {GA_model.getObjective(best_overall)[1]:0.5f}")
