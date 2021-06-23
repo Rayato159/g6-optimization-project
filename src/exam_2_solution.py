@@ -1,9 +1,11 @@
 from CrackBox import Black_Box_Function
 import numpy as np
 
+#Function from black box
 def f(decode_x1, decode_x2):
     return crack.getFunction(decode_x1, decode_x2)
 
+#Objective Function
 def getObjective(chromosome):
     lb_x = -2
     ub_x = 2
@@ -37,6 +39,48 @@ def getObjective(chromosome):
 
     return (decode_x1, decode_x2, f(decode_x1, decode_x2))
 
+#Tournament selection
+def find_parents_ts(all_solution):
+    parents = np.empty((0, np.size(all_solution, 1)))
+
+    for i in range(2):
+        indices_list = np.random.choice(len(all_solution), 3, replace=False)
+
+        print(f"round {i+1}# {indices_list}", end="\n\n")
+
+        posb_parent_1 = all_solution[indices_list[0]]
+        posb_parent_2 = all_solution[indices_list[1]]
+        posb_parent_3 = all_solution[indices_list[2]]
+
+        print(posb_parent_1)
+        print(posb_parent_2)
+        print(posb_parent_3)
+        print()
+
+        obj_func_parent_1 = getObjective(posb_parent_1)[2]
+        obj_func_parent_2 = getObjective(posb_parent_2)[2]
+        obj_func_parent_3 = getObjective(posb_parent_3)[2]
+
+        print(obj_func_parent_1)
+        print(obj_func_parent_2)
+        print(obj_func_parent_3)
+        print()
+
+        min_obj_func = min(obj_func_parent_1, obj_func_parent_2, obj_func_parent_3)
+
+        if min_obj_func == obj_func_parent_1:
+            selected_parent = posb_parent_1
+        elif min_obj_func == obj_func_parent_2:
+            selected_parent = posb_parent_2
+        else:
+            selected_parent = posb_parent_3
+            
+        print(f"winner is {selected_parent}")
+        print(f"minimum value is {min_obj_func}")
+        print()
+
+        parents = np.vstack((parents, selected_parent))
+
 crack = Black_Box_Function("input2.txt", "output2.txt", "2-6.exe")
 
 #bit >> [0,1,0,1,1,0,1,1,0,1,0,1,1,0,1,0]
@@ -50,43 +94,3 @@ for i in range(population):
     all_solution = np.vstack((all_solution, chromosome))
 
 print(all_solution, end="\n\n")
-
-#Tournament selection
-parents = np.empty((0, np.size(all_solution, 1)))
-
-for i in range(2):
-    indices_list = np.random.choice(len(all_solution), 3, replace=False)
-
-    print(f"round {i+1}# {indices_list}", end="\n\n")
-
-    posb_parent_1 = all_solution[indices_list[0]]
-    posb_parent_2 = all_solution[indices_list[1]]
-    posb_parent_3 = all_solution[indices_list[2]]
-
-    print(posb_parent_1)
-    print(posb_parent_2)
-    print(posb_parent_3)
-    print()
-
-    obj_func_parent_1 = getObjective(posb_parent_1)[2]
-    obj_func_parent_2 = getObjective(posb_parent_2)[2]
-    obj_func_parent_3 = getObjective(posb_parent_3)[2]
-
-    print(obj_func_parent_1)
-    print(obj_func_parent_2)
-    print(obj_func_parent_3)
-    print()
-
-    min_obj_func = min(obj_func_parent_1, obj_func_parent_2, obj_func_parent_3)
-
-    if min_obj_func == obj_func_parent_1:
-        selected_parent = posb_parent_1
-    elif min_obj_func == obj_func_parent_2:
-        selected_parent = posb_parent_2
-    else:
-        selected_parent = posb_parent_3
-        
-    print(f"winner is {selected_parent}")
-    print(f"minimum value is {min_obj_func}")
-
-    parents = np.vstack((parents, selected_parent)) 
