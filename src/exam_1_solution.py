@@ -21,8 +21,6 @@ x = [4.75]
 i = 0
 ea = 100
 
-print(fx(x[i]))
-
 print("Iter\txi\tfx\tea")
 
 while ea > 0.01:
