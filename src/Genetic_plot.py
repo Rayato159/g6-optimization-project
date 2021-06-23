@@ -15,7 +15,7 @@ X1_gen = df_gen["x1"]
 X2_gen = df_gen["x2"]
 Z_gen = df_gen["z"]  
 
-plt.scatter(X1_gen, X2_gen, Z_gen, color="#FF0000", label="genetic_algor")
+plt.scatter(X1_gen, X2_gen, color="#FF0000", label="genetic_algor")
 plt.tricontour(X1, X2, Z, 15, linewidths=0.5, colors='k')
 plt.tricontourf(X1, X2, Z, 15, cmap=cm.jet)
 
