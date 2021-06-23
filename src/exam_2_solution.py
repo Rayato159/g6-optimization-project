@@ -1,6 +1,17 @@
 from CrackBox import Black_Box_Function
 import numpy as np
 
+crack = Black_Box_Function("input2.txt", "output2.txt", "2-6.exe")
+
+chromosome = np.random.randint(high=2, low=0, size=16)
+
+population = 16
+all_solution = np.empty((0, len(chromosome)))
+
+for i in range(population):
+    np.random.shuffle(chromosome)
+    all_solution = np.vstack((all_solution, chromosome))
+
 #Function from black box
 def f(decode_x1, decode_x2):
     return crack.getFunction(decode_x1, decode_x2)
@@ -46,25 +57,13 @@ def find_parents_ts(all_solution):
     for i in range(2):
         indices_list = np.random.choice(len(all_solution), 3, replace=False)
 
-        print(f"round {i+1}# {indices_list}", end="\n\n")
-
         posb_parent_1 = all_solution[indices_list[0]]
         posb_parent_2 = all_solution[indices_list[1]]
         posb_parent_3 = all_solution[indices_list[2]]
 
-        print(posb_parent_1)
-        print(posb_parent_2)
-        print(posb_parent_3)
-        print()
-
         obj_func_parent_1 = getObjective(posb_parent_1)[2]
         obj_func_parent_2 = getObjective(posb_parent_2)[2]
         obj_func_parent_3 = getObjective(posb_parent_3)[2]
-
-        print(obj_func_parent_1)
-        print(obj_func_parent_2)
-        print(obj_func_parent_3)
-        print()
 
         min_obj_func = min(obj_func_parent_1, obj_func_parent_2, obj_func_parent_3)
 
@@ -75,11 +74,6 @@ def find_parents_ts(all_solution):
         else:
             selected_parent = posb_parent_3
             
-        print(f"winner is {selected_parent}")
-        print(f"minimum value is {min_obj_func}")
-        print("--------------------------------------------------")
-        print()
-
         parents = np.vstack((parents, selected_parent))
     
     parent_1 = parents[0,:]
@@ -88,7 +82,7 @@ def find_parents_ts(all_solution):
     return (parent_1, parent_2)
 
 #Crossover
-def crossover(parent_1, parent_2, cross_prob=0.8):
+def crossover(parent_1, parent_2, cross_prob=0.9):
 
     chlid_1 = np.empty((0, len(parent_1)))
     chlid_2 = np.empty((0, len(parent_2)))
@@ -125,7 +119,7 @@ def crossover(parent_1, parent_2, cross_prob=0.8):
 
     return (chlid_1, chlid_2)
 
-def mutation(chlid_1, chlid_2, muta_prob=0.2):
+def mutation(chlid_1, chlid_2, muta_prob=0.3):
     
     #Chlid_1
     mutated_chlid_1 = np.empty((0, len(chlid_1)))
@@ -170,41 +164,3 @@ def mutation(chlid_1, chlid_2, muta_prob=0.2):
             t += 1
 
     return (mutated_chlid_1, mutated_chlid_2)
-
-crack = Black_Box_Function("input2.txt", "output2.txt", "2-6.exe")
-
-#bit >> [0,1,0,1,1,0,1,1,0,1,0,1,1,0,1,0]
-chromosome = np.random.randint(high=2, low=0, size=16)
-
-population = 16
-all_solution = np.empty((0, len(chromosome)))
-
-for i in range(population):
-    np.random.shuffle(chromosome)
-    all_solution = np.vstack((all_solution, chromosome))
-
-print(all_solution, end="\n\n")
-
-parents = find_parents_ts(all_solution)
-parent_1 = parents[0]
-parent_2 = parents[1]
-
-print(f"parent1# {parent_1}")
-print(f"parent2# {parent_2}")
-print()
-
-chlids = crossover(parent_1, parent_2)
-chlid_1 = chlids[0]
-chlid_2 = chlids[1]
-
-print(f"chlid1# {chlid_1}")
-print(f"chlid2# {chlid_2}")
-print()
-
-mutated_chlids = mutation(chlid_1, chlid_2)
-mutated_chlid_1 = mutated_chlids[0]
-mutated_chlid_2 = mutated_chlids[1]
-
-print(f"mutated_chlid1# {mutated_chlid_1}")
-print(f"mutated_chlid2# {mutated_chlid_2}")
-print()
