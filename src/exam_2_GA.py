@@ -44,3 +44,24 @@ for i in range(generation):
         print(f"Obj_value_for_mutated_chlid #1 at generation #{gen} : {obj_val_muta_chlid_1}")
         print(f"Obj_value_for_mutated_chlid #2 at generation #{gen} : {obj_val_muta_chlid_2}")
 
+        mutated_1_with_obj_val = np.hstack((obj_val_muta_chlid_1, muta_chlid_1))
+        mutated_2_with_obj_val = np.hstack((obj_val_muta_chlid_2, muta_chlid_1))
+
+        new_population = np.vstack((new_population, muta_chlid_1, muta_chlid_2))
+
+        new_population_with_obj_value = np.vstack((new_population_with_obj_value,
+                                                    mutated_1_with_obj_val, 
+                                                    mutated_2_with_obj_val))
+
+        family += 1
+    
+    pool_of_solution = new_population
+    
+    sorted_best_for_plotting = np.array(sorted(new_population_with_obj_value,
+                                                key=lambda x:x[0]))
+    
+    best_of_a_generation = np.vstack((best_of_a_generation,
+                                        sorted_best_for_plotting[0]))
+
+    gen += 1
+
