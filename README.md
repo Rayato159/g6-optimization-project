@@ -68,14 +68,14 @@ These methods are randomized search algorithms that have been developed in an ef
 
 To describe the process of the genetic algorithm starts with a random generation of the initial population. Following with the selection, crossover, and mutation e preceded until the generation reaches maximum.    
 
-    • Selection
-The selection of parents to produce successive generations plays a crucial role in this method. The goal allows the fittest individuals to be more often selected to reproduce. 
+- Selection
+  - The selection of parents to produce successive generations plays a crucial role in this method. The goal allows the fittest individuals to be more often selected to reproduce. 
 
-    • Crossover
-The crossover step is an important operator of the genetic algorithm. It is responsible for the structure recombination and the convergence speed of the GA, and it is applied with a high probability of around 0.6-0.9. After the selected operation, simple crossover proceeds. The main objective of crossover is to reorganize the information of two different individuals and produce a new one.
+- Crossover
+  - The crossover step is an important operator of the genetic algorithm. It is responsible for the structure recombination and the convergence speed of the GA, and it is applied with a high probability of around 0.6-0.9. After the selected operation, simple crossover proceeds. The main objective of crossover is to reorganize the information of two different individuals and produce a new one.
 
-    • Mutation 
-The mutation is a background operator, which produces a spontaneous change in various chromosomes. In an artificial genetic system, the mutation operator protects against some irrecoverable loss. It is an occasional random alteration of the value in the string position. The mutation is needed because even though reproduction and crossover effectively search and recombine extent notions, occasionally, they may lose some potentially useful genetic material.    
+- Mutation 
+  - The mutation is a background operator, which produces a spontaneous change in various chromosomes. In an artificial genetic system, the mutation operator protects against some irrecoverable loss. It is an occasional random alteration of the value in the string position. The mutation is needed because even though reproduction and crossover effectively search and recombine extent notions, occasionally, they may lose some potentially useful genetic material.    
 
 ####  Flow chart of out "Genetic Algorithm":
 ***Code:*** [Genetic_Algorithm.py](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/src/Genetic_Algorithm.py) and [exam_2_Solution.py](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/src/exam_2_Solution.py)
