@@ -25,7 +25,7 @@ Exam 1 is quite simple. Just need to visualize some output from executing a file
 
 ![fig1](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/graph/exam_1_graph.png)
 
-Finally, We connect Python to 6.exe to get the real time output. We know the range of x where the lowest point is placed, so we choose **"Newton method"** for optimize the problem which use 3 iterations to solve.
+Finally, We connect Python to 6.exe (Here the code to connect black box function to out Python in real time [CrackBox.py)](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/src/CrackBox.py).) to get the real time output. We know the range of x where the lowest point is placed, so we choose **"Newton method"** for optimize the problem which use 3 iterations to solve.
 
 ***Code:*** [exam_1_solution.py](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/src/exam_1_solution.py)
 
