@@ -27,6 +27,8 @@ Exam 1 is quite simple. Just need to visualize some output from executing a file
 
 Finally, We connect Python to 6.exe to get the real time output. We know the range of x where the lowest point is placed, so we choose **"Newton method"** for optimize the problem which use 3 iterations to solve.
 
+***Code:*** [exam_1_solution.py](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/src/exam_1_solution.py)
+
 ***Output:***
 ```shell
 Iter	xi	fx	ea
@@ -72,6 +74,7 @@ The crossover step is an important operator of the genetic algorithm. It is resp
 The mutation is a background operator, which produces a spontaneous change in various chromosomes. In an artificial genetic system, the mutation operator protects against some irrecoverable loss. It is an occasional random alteration of the value in the string position. The mutation is needed because even though reproduction and crossover effectively search and recombine extent notions, occasionally, they may lose some potentially useful genetic material.    
 
 ####  Flow chart of out "Genetic Algorithm":
+***Code:*** [Genetic_Algorithm.py](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/src/Genetic_Algorithm.py) and [exam_2_Solution.py](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/src/exam_2_Solution.py)
 
 ![flowchart](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/graph/Genetic%20Algorithm.svg)
 
