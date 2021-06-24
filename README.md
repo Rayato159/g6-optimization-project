@@ -71,3 +71,5 @@ The crossover step is an important operator of the genetic algorithm. It is resp
 The mutation is a background operator, which produces a spontaneous change in various chromosomes. In an artificial genetic system, the mutation operator protects against some irrecoverable loss. It is an occasional random alteration of the value in the string position. The mutation is needed because even though reproduction and crossover effectively search and recombine extent notions, occasionally, they may lose some potentially useful genetic material.    
 
 ####  Flow chart of out "Genetic Algorithm":
+
+![flowchart](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/graph/Genetic%20Algorithm.svg)
