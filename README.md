@@ -38,7 +38,7 @@ Iter	xi	fx	ea
 Answer is 4.8153 and the minimum value is -1.9946
 ```
 ***Answer: The minimum value is -1.9946 at x = 4.8153.***  
-***Iterations: 3**  
+***Iterations: 3***  
 
 ### Exam No.2
 Now the real things begin. In this part, we do the same as previous. Thus, plot the graph at first to visualize where the minimum point is.
