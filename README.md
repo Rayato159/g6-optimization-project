@@ -29,7 +29,9 @@ Finally, We connect Python to 6.exe (Here the code to connect black box function
 
 ***Methodology of [CrackBox.py](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/src/CrackBox.py) (How it works.):***  
 
-![CrackBox](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/graph/CrackBox.svg)
+<p align="center">
+  <img src="https://github.com/Rayato159/G6-Optimization-Exam/blob/main/graph/CrackBox.svg" alt="crackbox"/>
+</p>
 
 ***Code:*** [exam_1_solution.py](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/src/exam_1_solution.py)
 
@@ -80,7 +82,9 @@ To describe the process of the genetic algorithm starts with a random generation
 ####  Flow chart of out "Genetic Algorithm":
 ***Code:*** [Genetic_Algorithm.py](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/src/Genetic_Algorithm.py) and [exam_2_Solution.py](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/src/exam_2_Solution.py)
 
-![flowchart](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/graph/Genetic%20Algorithm.svg)
+<p align="center">
+  <img src="https://github.com/Rayato159/G6-Optimization-Exam/blob/main/graph/Genetic%20Algorithm.svg" alt="flowchart"/>
+</p>
 
 #### Continue with exam no.2
 The result of the genetic algorithm as follows.
