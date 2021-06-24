@@ -14,7 +14,6 @@ plt.tricontour(X1, X2, Z, 50, linewidths=0.5, colors='k')
 plt.tricontourf(X1, X2, Z, 50, cmap=cm.jet)
 
 plt.title("Exam2 contour plot")
-plt.grid()
 plt.show()
 
 #3D
@@ -31,6 +30,5 @@ my_cmap = plt.get_cmap('jet')
 sctt = ax.scatter3D(X_b1, X_b2, Z, c = Z, cmap = my_cmap, marker ='o')
 
 plt.title("Exam2 3D scatter plot")
-plt.grid()
 plt.legend()
 plt.show()

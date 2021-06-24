@@ -3,8 +3,8 @@ import pandas as pd
 from matplotlib import cm
 from matplotlib import pyplot as plt
 
-df_graph = pd.read_csv("../graph/exam2_output.csv")
-df_gen = pd.read_csv("../graph/genetic_algorithm_output.csv")
+df_graph = pd.read_csv("./exam2_output.csv")
+df_gen = pd.read_csv("./genetic_algorithm_output.csv")
 
 #Contour
 X1 = df_graph["x1"]

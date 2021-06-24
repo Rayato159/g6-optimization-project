@@ -10,7 +10,11 @@ y = df['Y']
 
 fig,ax = plt.subplots()
 
+scatt = ax.scatter(x, y, c=y, cmap='hot')
 ax.plot(x, y, color="#000000")
-scatt = ax.scatter(x, y, c=y, cmap='jet')
+
+plt.title("Exam_1_graph")
+plt.xlabel("x")
+plt.ylabel("f(x)")
 plt.grid()
 plt.show()
