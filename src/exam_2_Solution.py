@@ -7,7 +7,7 @@ GA_model = GA(chromosome_size=16, population=100, cross_prob=0.9, muta_prob=0.03
 
 #Set parameters
 population = GA_model.population
-generation = 25
+generation = 100
 x1_x2_chrom = GA_model.create_generation()[0]
 pool_of_solution = GA_model.create_generation()
 best_of_a_generation = np.empty((0, len(x1_x2_chrom)+1))
