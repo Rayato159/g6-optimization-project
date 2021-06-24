@@ -60,7 +60,7 @@ This problem can't use calculus optimization to deal with. Because we don’t ev
 
 #### Into the "Genetic Algorithm":
 
-The Genetic Algorithm (GA) is a method for solving constrained and unconstrained optimization problems based on Charles Darwin's theory of natural selection, which mimics biological evolution.    
+The Genetic Algorithm (GA) is a method for solving constrained and unconstrained optimization problems based on Charles Darwin's theory of natural selection, which mimics biological evolution by John Henry Holland in the 1970s.    
 
 These methods are randomized search algorithms that have been developed in an effort to imitate the mechanics of natural selection and natural genetics. Genetic algorithms operate on string structures, like biological structures, which are evolving in time according to the rule of survival of the fittest by using a randomized yet structured information exchange. The first string structure has the fittest information, which will be used for the new string, call generations. The main characteristics of a genetic algorithm are as follow :  
 
