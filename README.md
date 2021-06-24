@@ -29,8 +29,8 @@ Finally, We connect Python to 6.exe (Here the code to connect black box function
 
 ***Code:*** [exam_1_solution.py](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/src/exam_1_solution.py)
 
-***Output:***
 ```shell
+Output:
 Iter	xi	fx	ea
 1	4.8210	-1.8753	1.4726
 2	4.8153	-1.9937	0.1179
@@ -85,8 +85,8 @@ The result of the genetic algorithm as follows.
 
 Then, the genetic algorithm can find the minimum of this function.    
 
-***Output:***
 ```shell
+Output:
 Execution time: 2761.4247014522552
 
 Final solution (Convergence): [0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
@@ -106,6 +106,17 @@ Final Obj value (Best): 3.01541
 Decode_x1 (Best): 0.00784
 Decode_x2 (Best): -0.99608
 ```
-***Answer: The minimum value is 3.01541 at x1 = 0.0078, x2 = -0.99608.***  
 ***Time execute: 2761.42 sec (46 min)***  
-***Time complexity: O(100 population * 25 generation) = O(2500)***  
+
+#### Continue with gradient descent
+Finally, We need to make sure that points are minimum value. Therefore, We used gradient descent to make sure. (code: [exam_2_gsd.py](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/src/exam_2_gsd.py))
+```shell
+Output:
+iter: 1	dir: [3.1089 1.676 ]	x1: 0.00177	x2: -0.99935	f: 3.00072
+iter: 2	dir: [0.7749 0.2027]	x1: 0.00025	x2: -0.99975	f: 3.00003
+iter: 3	dir: [0.1049 0.2479]	x1: 0.00024	x2: -0.99978	f: 3.00002
+iter: 4	dir: [0.1359 0.1979]	x1: 0.00018	x2: -0.99988	f: 3.00001
+iter: 5	dir: [0.0954 0.1264]	x1: 0.00018	x2: -0.99988	f: 3.00001
+```
+***Answer: The minimum value is 3.00001 at x1 = 0.00018, x2 = -0.99988.***
+***Iterations: 3***  
