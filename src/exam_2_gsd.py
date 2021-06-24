@@ -22,7 +22,7 @@ if __name__ == "__main__":
     
     k = 0
     error = np.matrix([1.0, 1.0])
-    final_error = np.matrix([0.05, 0.05])
+    final_error = np.matrix([0.01, 0.01])
     gramma = 0.5
 
     hf = []
@@ -52,4 +52,4 @@ if __name__ == "__main__":
 
         hf.append(f(x))
 
-        print(f"iter: {k}\tdir: {-1*dir}\tx1: {x[0]:0.5f}\tx2: {x[1]:0.5f}\tf: {hf[k]:0.5f}")
+        print(f"iter: {k}\tdir: {-1*dir}\tx1: {x[0]:0.7f}\tx2: {x[1]:0.7f}\tf: {hf[k]:0.7f}")
