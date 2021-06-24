@@ -27,7 +27,7 @@ Exam 1 is quite simple. Just need to visualize some output from executing a file
 
 Finally, We connect Python to 6.exe to get the real time output. We know the range of x where the lowest point is placed, so we choose **"Newton method"** for optimize the problem which use 3 iterations to solve.
 
-Output:
+***Output:***
 ```shell
 Iter	xi	fx	ea
 1	4.8210	-1.8753	1.4726
@@ -35,7 +35,8 @@ Iter	xi	fx	ea
 3	4.8153	-1.9946	0.0007
 Answer is 4.8153 and the minimum value is -1.9946
 ```
-
+***Answer: The minimum value is -1.9946 at x = 4.8153.***  
+***Iterations: 3**  
 
 ### Exam No.2
 Now the real things begin. In this part, we do the same as previous. Thus, plot the graph at first to visualize where the minimum point is.
@@ -73,3 +74,35 @@ The mutation is a background operator, which produces a spontaneous change in va
 ####  Flow chart of out "Genetic Algorithm":
 
 ![flowchart](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/graph/Genetic%20Algorithm.svg)
+
+#### Continue with exam no.2
+The result of the genetic algorithm as follows.
+
+![fig4](https://github.com/Rayato159/G6-Optimization-Exam/blob/main/graph/Genetic_plot.png)
+
+Then, the genetic algorithm can find the minimum of this function.    
+
+***Output:***
+```shell
+Execution time: 2761.4247014522552
+
+Final solution (Convergence): [0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+Encode_x1 (Convergence): [1. 0. 0. 0. 0. 0. 0. 0.]
+Encode_x2 (Convergence): [0. 1. 0. 0. 0. 0. 0. 0.]
+
+Final solution (Best): [0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+Encode_x1 (Best): [1. 0. 0. 0. 0. 0. 0. 0.]
+Encode_x2 (Best): [0. 1. 0. 0. 0. 0. 0. 0.]
+
+
+Final obj value (Convergence) 3.01541
+Decode_x1 (Convergence): 0.00784
+Decode_x2 (Convergence): -0.99608
+
+Final Obj value (Best): 3.01541
+Decode_x1 (Best): 0.00784
+Decode_x2 (Best): -0.99608
+```
+***Answer: The minimum value is 3.01541 at x1 = 0.0078, x2 = -0.99608.***  
+***Time execute: 2761.42 sec (46 min)***  
+***Time complexity: O(100 population * 25 generation) = O(2500)***  
