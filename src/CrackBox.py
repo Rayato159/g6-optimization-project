@@ -17,7 +17,7 @@ class Black_Box_Function:
             else:
                 w.write(f"{self.x1} {self.x2}")
         
-        os.system("wine " + self.execute + " > /dev/null 2>&1")
+        os.system(self.execute + " > nul 2>&1")
         # os.system("clear")
 
         with open("./" + self.f_output, "r") as f:
