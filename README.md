@@ -1,4 +1,6 @@
-## :pencil: Final Project - Black Box Optimization problem [Group 6]
+## :pencil: Final Project - Black Box Optimization problem [Group 6]  
+
+***For windows version [Click!](https://github.com/Rayato159/G6-Optimization-Exam?fbclid=IwAR1kwpRcYcZJR3oRhirEAJBRllzqdHzlGgITj1O_a45FaTj2qbpOuXQrPeI)***
 
 ### Lecturer:
 Dr. Atthaphon Ariyarit
