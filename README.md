@@ -1,6 +1,5 @@
 ## :pencil: Final Project - Black Box Optimization problem [Group 6]
 
-***Windows version (Please don't care with shell script I will re-write after my final exam is finish.)***
 ### Lecturer:
 Dr. Atthaphon Ariyarit
 
